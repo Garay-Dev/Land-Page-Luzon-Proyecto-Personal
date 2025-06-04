@@ -2,12 +2,19 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 body {
+    margin: 20px 0;
     background-color: #ffffff;
     color: #000;
     font-family: inter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
 }
 
 /* ------------------------- HEADER ------------------------- */
@@ -21,20 +28,20 @@ header{
 }
 
 .header__nav{
-    width: 93%;
+    width: 90vw; 
     display: flex;
     justify-content: space-between;
 }
 
 h1{
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.6rem;
     position: absolute;
 }
 
 .header__nav__toggle{
     font-weight: 800;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     border: none;
 }
 
@@ -47,7 +54,6 @@ h1{
 }
 
 .header__nav__element>a{
-    text-decoration: none;
     color: inherit;
     font-weight: 500;
 }
@@ -92,4 +98,77 @@ h1{
     .header__nav__element{
         font-size: 1.2rem;
     }
+}
+
+/* ------------------------- MAIN ------------------------- */
+
+/* ------------------------- HERO SECTION ------------------------- */
+
+.hero{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+
+.hero__text-wrapper{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.hero__text-wrapper > h2{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.hero__text-wrapper > p{
+    font-size: 0.9rem;
+    font-weight: 200;
+    color: #000000d2;
+}
+
+.btn-primary{
+    background-color: #000;
+    font-size: 1.2em;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.hero > img{
+    width: 100%;
+    border-radius: 7px;
+    margin: auto;
+}
+
+/* ------------------------- HERO QUERYS ------------------------- */
+
+@media (min-width: 900px) and (orientation: landscape) {
+    .hero{
+        gap: 60px;
+    }
+    body{
+        gap: 80px;
+    }
+    .hero__text-wrapper > h2{
+        font-size: 3.5rem;
+    }
+    .hero__text-wrapper > p{
+        font-size: 1.5rem;
+        white-space: pre;
+    }
+    .btn-primary{
+        font-weight: 300;
+        font-size: 1.6rem;
+        padding: 20px 35px
+    }
+}
+
+
+@media (min-width: 1240px){
+    .btn-primary{
+        font-weight: 500;
+}
 }
